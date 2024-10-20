@@ -104,7 +104,7 @@ const Navbar = () => {
             {!isInputVisible && <FaSearch className="w-5 h-5 text-gray-400" />}
           </span>
 
-          <div className="flex items-center md:flex block">
+          <div className="flex items-center md:flex ">
             <Link
               to="#"
               className="relative text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-300 mx-4 flex items-center"
