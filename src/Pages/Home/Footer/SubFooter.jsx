@@ -1,6 +1,6 @@
 const SubFooter = () => {
   return (
-    <div>
+    <>
       <div className="bg-black w-2/3 m-auto p-4 items-center rounded-md mt-8">
         <div className="flex-col-1 lg:flex md:flex justify-between items-center mt-4">
           <p className="text-left text-white dark:text-gray-400 font-extrabold text-2xl">
@@ -20,7 +20,7 @@ const SubFooter = () => {
                 </svg>
                 <input
                   type="text"
-                  className="grow"
+                  className="grow w-full"
                   placeholder="Enter Your Email"
                 />
               </label>
@@ -31,7 +31,7 @@ const SubFooter = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

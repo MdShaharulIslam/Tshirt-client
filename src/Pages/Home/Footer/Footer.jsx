@@ -9,7 +9,7 @@ const Footer = () => {
     return (
         <div className=" bg-[#F0F0F0] dark:bg-gray-900 ">
             <div className='relative mt-6'>
-                <div className="absolute -mt-32 w-full"><SubFooter></SubFooter></div>
+                <div className="absolute -mt-40 w-full"><SubFooter></SubFooter></div>
                 <footer className="bg-[#F0F0F0] dark:bg-gray-900 lg:pt-16 md:pt-16 pt-40 ">
                     <div className="container p-6 mx-auto">
                         <div className="lg:flex">
