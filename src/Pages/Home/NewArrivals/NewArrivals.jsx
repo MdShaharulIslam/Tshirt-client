@@ -89,7 +89,7 @@ const  NewArrivals= () => {
       {/* View All Button */}
       <div className="text-center mt-8">
         <button className="text-black w-48 px-6 py-2 rounded-lg border transition">
-          View All
+          View All2
         </button>
       </div>
     </section>
