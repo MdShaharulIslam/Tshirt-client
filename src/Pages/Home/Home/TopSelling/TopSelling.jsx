@@ -1,12 +1,15 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import ReactRating from 'react-rating';
 import { FaStar, FaRegStar } from 'react-icons/fa';
 import img1 from '../../../../assets/top1.png';
 import img2 from '../../../../assets/top2.png';
 import img3 from '../../../../assets/top3.png';
-import img4 from '../../../../assets/top4.png'; 
+import img4 from '../../../../assets/top4.png';
 
 const TopSelling = () => {
+  const navigate = useNavigate();
+
   const products = [
     {
       name: "T-shirt with Tape Details",
@@ -42,6 +45,11 @@ const TopSelling = () => {
     },
   ];
 
+  const handleProductClick = (product) => {
+    // Navigate to the product details page and pass the product data
+    navigate(`/product/${product.name}`, { state: { product } });
+  };
+
   return (
     <section className="py-12">
       <h2 className="text-3xl font-bold text-center mb-8">TOP SELLING</h2>
@@ -49,7 +57,8 @@ const TopSelling = () => {
         {products.map((product, index) => (
           <div
             key={index}
-            className="bg-white rounded-lg shadow-lg p-4 text-center transition-transform transform hover:scale-105"
+            onClick={() => handleProductClick(product)}
+            className="bg-white rounded-lg shadow-lg p-4 text-center transition-transform transform hover:scale-105 cursor-pointer"
           >
             <img
               src={product.image}
@@ -64,7 +73,7 @@ const TopSelling = () => {
                 initialRating={product.rating}
                 emptySymbol={<FaRegStar className="text-yellow-500" />}
                 fullSymbol={<FaStar className="text-yellow-500" />}
-                fractions={2}  // Allows half-star ratings
+                fractions={2} // Allows half-star ratings
                 readonly
               />
               <span className="ml-2 text-gray-700">{product.rating}/5</span>

@@ -1,3 +1,4 @@
+
 import Banner from "../Banner/Banner";
 import DressStyle from "../DressStyle/DressStyle";
 import NewArrivals from "../NewArrivals/NewArrivals";
@@ -23,6 +24,7 @@ const Home = () => {
             <div className="mb-12">
                 <Rating></Rating>
             </div>
+            
             
         </div>
     );

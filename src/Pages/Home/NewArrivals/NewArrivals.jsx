@@ -5,8 +5,11 @@ import img1 from '../../../assets/image 7.png';
 import img2 from '../../../assets/Frame 33.png'; 
 import img3 from '../../../assets/Frame 38.png'; 
 import img4 from '../../../assets/Frame 34.png';
+import { useNavigate } from 'react-router-dom';
 
-const  NewArrivals= () => {
+const NewArrivals = () => {
+  const navigate = useNavigate();  // useNavigate for navigation
+
   const products = [
     {
       name: "T-shirt with Tape Details",
@@ -42,14 +45,20 @@ const  NewArrivals= () => {
     },
   ];
 
+  const handleProductClick = (product) => {
+    // Navigate to the ProductDetails page and pass the product data via state
+    navigate(`/product/${product.name}`, { state: { product } });
+  };
+
   return (
     <section className="py-12">
-      <h2 className="text-3xl font-bold text-center mb-8">TOP SELLING</h2>
+      <h2 className="text-3xl font-bold text-center mb-8">NEW ARRIVALS</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
         {products.map((product, index) => (
           <div
             key={index}
-            className="bg-white rounded-lg shadow-lg p-4 text-center transition-transform transform hover:scale-105"
+            className="bg-white rounded-lg shadow-lg p-4 text-center transition-transform transform hover:scale-105 cursor-pointer"
+            onClick={() => handleProductClick(product)} // Add click handler
           >
             <img
               src={product.image}
@@ -96,6 +105,4 @@ const  NewArrivals= () => {
   );
 };
 
-export default  NewArrivals;
-
-
+export default NewArrivals;
