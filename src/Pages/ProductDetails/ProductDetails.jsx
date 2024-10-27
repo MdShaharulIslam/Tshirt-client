@@ -15,10 +15,10 @@ const ProductDetails = () => {
   const sizes = ["Small", "Medium", "Large", "X-Large"];
 
   const location = useLocation();
-  const { product } = location.state || {}; // Get the product from location state
+  const { product } = location.state || {}; 
 
   if (!product) {
-    return <div>No product found!</div>; // Render this if no product is passed
+    return <div>No product found!</div>; 
   }
 
   return (
