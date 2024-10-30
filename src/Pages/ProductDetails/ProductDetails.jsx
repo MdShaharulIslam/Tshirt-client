@@ -30,6 +30,7 @@ const ProductDetails = () => {
             alt="Thumbnail 1"
             className="w-32 rounded-lg cursor-pointer"
           />
+          
           <img
             src={product.image}
             alt="Thumbnail 2"
