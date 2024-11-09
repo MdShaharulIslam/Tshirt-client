@@ -45,8 +45,7 @@ const ProductDetails = () => {
 
         <div className="md:w-2/3 flex flex-col space-y-4 ml-4">
           {" "}
-          {/* Adjust width as needed */}
-          {/* Main Image */}
+         
           <img
             src={product.image}
             alt={product.name}
