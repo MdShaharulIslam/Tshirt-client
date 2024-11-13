@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
+import { Tab } from "../Home/Home/Tab/Tab"; // Adjust the import based on your export
 
 const ProductDetails = () => {
   const [selectedColor, setSelectedColor] = useState("olive");
@@ -15,10 +16,10 @@ const ProductDetails = () => {
   const sizes = ["Small", "Medium", "Large", "X-Large"];
 
   const location = useLocation();
-  const { product } = location.state || {}; 
+  const { product } = location.state || {};
 
   if (!product) {
-    return <div>No product found!</div>; 
+    return <div>No product found!</div>;
   }
 
   return (
@@ -30,7 +31,6 @@ const ProductDetails = () => {
             alt="Thumbnail 1"
             className="w-32 rounded-lg cursor-pointer"
           />
-          
           <img
             src={product.image}
             alt="Thumbnail 2"
@@ -39,13 +39,11 @@ const ProductDetails = () => {
           <img
             src={product.image}
             alt="Thumbnail 3"
-            className="w-32  rounded-lg cursor-pointer"
+            className="w-32 rounded-lg cursor-pointer"
           />
         </div>
 
         <div className="md:w-2/3 flex flex-col space-y-4 ml-4">
-          {" "}
-         
           <img
             src={product.image}
             alt={product.name}
@@ -138,6 +136,11 @@ const ProductDetails = () => {
               +
             </button>
           </div>
+        </div>
+
+        {/* Tab Component */}
+        <div>
+          <Tab />
         </div>
 
         {/* Add to Cart Button */}
