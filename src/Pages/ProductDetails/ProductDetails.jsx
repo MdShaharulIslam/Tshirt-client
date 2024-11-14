@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
-import { Tab } from "../Home/Home/Tab/Tab"; // Adjust the import based on your export
-
+import  Tab  from "../Home/Home/Tab/Tab"; 
 const ProductDetails = () => {
   const [selectedColor, setSelectedColor] = useState("olive");
   const [selectedSize, setSelectedSize] = useState("Large");
@@ -138,16 +137,16 @@ const ProductDetails = () => {
           </div>
         </div>
 
-        {/* Tab Component */}
-        <div>
-          <Tab />
-        </div>
+       
 
         {/* Add to Cart Button */}
         <button className="w-full bg-black text-white py-3 rounded-lg mt-4 hover:bg-gray-800 transition">
           Add to Cart
-        </button>
-      </div>
+        </button>{/* Tab Component */}
+        <div>
+          <Tab />
+        </div>
+      </div> 
     </div>
   );
 };
