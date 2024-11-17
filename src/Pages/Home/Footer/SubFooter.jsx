@@ -8,7 +8,7 @@ const SubFooter = () => {
           </p>
           <div className="flex flex-col mx-auto mt-6 space-y-3 lg:space-y-0 lg:flex-row lg:space-x-4">
             <div className="flex flex-col lg:flex-col space-y-3  items-center">
-              <label className="input input-bordered flex items-center gap-2 w-full">
+              <label className="input input-bordered flex items-center gap-2 w-full">.
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 16 16"
