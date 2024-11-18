@@ -1,6 +1,7 @@
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import Reviews from '../Review/Reviews';
+// import Reviews from '../Review/Reviews';
+import Reviews from './../Review/Reviews';
 
 export default () => (
   <div className="container mx-auto p-6">
@@ -46,24 +47,8 @@ export default () => (
           </div>
 
           {/* Reviews List */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
-            <div className="p-4 bg-white shadow-md rounded-lg border">
-              <h3 className="text-lg font-bold">Samantha D. <span className="text-green-500">&#10004;</span></h3>
-              <p className="text-gray-700 mt-2">
-                "I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable..."
-              </p>
-              <p className="text-sm text-gray-500 mt-4">Posted on August 14, 2023</p>
-            </div>
-
-            <div className="p-4 bg-white shadow-md rounded-lg border">
-              <h3 className="text-lg font-bold">Alex M. <span className="text-green-500">&#10004;</span></h3>
-              <p className="text-gray-700 mt-2">
-                "The t-shirt exceeded my expectations! The colors are vibrant and the print quality is top-notch..."
-              </p>
-              <p className="text-sm text-gray-500 mt-4">Posted on August 15, 2023</p>
-            </div>
-
-            {/* Add more review cards similarly */}
+          <div>
+         <Reviews></Reviews>
           </div>
 
           {/* Load More Button */}
