@@ -141,11 +141,11 @@ const ProductDetails = () => {
         <button className="w-full bg-black text-white py-3 rounded-lg mt-4 hover:bg-gray-800 transition">
           Add to Cart
         </button>
-        {/* Tab Component */}
-      </div>
-      <div>
+        {/* Tab Component */}<div className="w-full">
         <Tab />
       </div>
+      </div>
+      
     </div>
   );
 };
