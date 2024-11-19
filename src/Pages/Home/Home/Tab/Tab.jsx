@@ -4,11 +4,11 @@ import 'react-tabs/style/react-tabs.css';
 import Reviews from './../Review/Reviews';
 
 export default () => (
-  <div className="container mx-auto p-6">
+  <div className="container mx-auto p-8 ">
     {/* Tabs Container */}
     <Tabs className="w-full">
       {/* Tab Navigation */}
-      <TabList className="flex justify-center space-x-8 border-b border-gray-300 mb-6">
+      <TabList className="flex justify-center space-x-48 border-b border-gray-300 mb-6">
         <Tab
           className="text-lg font-medium cursor-pointer py-2 px-4 hover:text-black"
           selectedClassName="border-b-4 border-black text-black"

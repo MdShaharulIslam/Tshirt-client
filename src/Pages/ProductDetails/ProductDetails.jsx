@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 import Tab from "../Home/Home/Tab/Tab";
+import NewArrivals from "../Home/NewArrivals/NewArrivals";
+
 
 const ProductDetails = () => {
   const [selectedColor, setSelectedColor] = useState("olive");
@@ -151,6 +153,9 @@ const ProductDetails = () => {
       {/* Tab Component - Full Width */}
       <div className="w-full mt-8">
         <Tab />
+      </div>
+      <div className="w-full mt-8">
+       <NewArrivals></NewArrivals>
       </div>
     </div>
   );
