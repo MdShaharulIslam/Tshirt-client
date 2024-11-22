@@ -106,7 +106,6 @@ const Sidebar = () => {
           </div>
         </div>
   
-        {/* Size */}
         <div className="mb-6">
           <h3 className="font-semibold mb-2">Size</h3>
           <div className="flex flex-wrap gap-2">
