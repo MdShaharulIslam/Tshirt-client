@@ -43,13 +43,7 @@ const reviewsData = [
     review: "I'm not just wearing a t-shirt; I'm wearing a piece of design philosophy. The intricate details and thoughtful layout of the design make this shirt a conversation starter.",
     rating: 5,
   },
-  {
-    id: 6,
-    name: 'Ava H.',
-    date: 'August 19, 2023',
-    review: "I'm not just wearing a t-shirt; I'm wearing a piece of design philosophy. The intricate details and thoughtful layout of the design make this shirt a conversation starter.",
-    rating: 5,
-  },
+
 ];
 
 const Reviews = () => {
