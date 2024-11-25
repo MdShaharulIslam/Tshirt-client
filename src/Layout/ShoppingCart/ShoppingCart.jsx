@@ -1,4 +1,8 @@
 import React from 'react';
+import img1 from '../../assets/Frame 33.png';
+import img2 from '../../assets/Frame 38.png'; 
+import img3 from '../../assets/Frame 34.png'; 
+
 import { FiTrash2 } from 'react-icons/fi'; // Importing an icon for the delete button
 
 const CartItem = ({ item }) => {
@@ -43,7 +47,7 @@ const ShoppingCart = () => {
       color: 'White',
       price: 145,
       quantity: 1,
-      image: 'https://via.placeholder.com/64',
+      image: img1,
     },
     {
       name: 'Checkered Shirt',
@@ -51,7 +55,7 @@ const ShoppingCart = () => {
       color: 'Red',
       price: 180,
       quantity: 1,
-      image: 'https://via.placeholder.com/64',
+      image: img2,
     },
     {
       name: 'Skinny Fit Jeans',
@@ -59,7 +63,7 @@ const ShoppingCart = () => {
       color: 'Blue',
       price: 240,
       quantity: 1,
-      image: 'https://via.placeholder.com/64',
+      image: img3,
     },
   ];
 

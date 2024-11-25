@@ -8,14 +8,11 @@ const Navber = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-
   return (
     <nav className="bg-white shadow dark:bg-gray-800">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-        {/* Left Section: Toggle Button and Logo */}
-        <div className="flex items-center">
-          {/* Mobile menu button */}
-          <button
+              <div className="flex items-center">
+                <button
             onClick={toggleMenu}
             className="text-gray-500 dark:text-gray-200 md:hidden focus:outline-none"
             aria-label="toggle menu"
@@ -32,8 +29,6 @@ const Navber = () => {
             SHOP.CO
           </Link>
         </div>
-
-        {/* Center Section: Links (hidden on small screens) */}
         <div
           className={`${
             isOpen ? "hidden" : "hidden"
@@ -93,8 +88,7 @@ const Navber = () => {
           {/* Cart Icon */}
           <Link
             to="/cartitem"
-            className="relative text-gray-700 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-300"
-          >
+            className="relative text-gray-700 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-300">
             <FaShoppingCart className="w-5 h-5" />
             <span className="absolute -top-4 right-4 p-1 text-xs text-white bg-blue-500 rounded-full">
               0
