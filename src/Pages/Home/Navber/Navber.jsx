@@ -28,7 +28,7 @@ const Navber = () => {
           </button>
 
           {/* Logo */}
-          <Link to="#" className="text-4xl font-extrabold ">
+          <Link to="/" className="text-4xl font-extrabold ">
             SHOP.CO
           </Link>
         </div>
@@ -92,7 +92,7 @@ const Navber = () => {
 
           {/* Cart Icon */}
           <Link
-            to="#"
+            to="/cartitem"
             className="relative text-gray-700 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-300"
           >
             <FaShoppingCart className="w-5 h-5" />
