@@ -3,6 +3,7 @@ import casualImg from '../../../assets/casual.png';
 import formalImg from '../../../assets/formal.png';
 import partyImg from '../../../assets/party.png';
 import gymImg from '../../../assets/gym.png';
+import { Link } from 'react-router-dom';
 
 const DressStyle = () => {
   return (
@@ -16,7 +17,8 @@ const DressStyle = () => {
         <div className="flex flex-col lg:flex-row justify-center gap-4 mb-4">
   {/* Larger Image */}
   <div className="w-full lg:w-1/3">
-    <img src={casualImg} alt="Casual" className="w-full object-cover h-[289px]" />
+   <Link to='casual'>  <img src={casualImg} alt="Casual" className="w-full object-cover h-[289px]" /></Link>
+   
   </div>
 
   {/* Smaller Image */}

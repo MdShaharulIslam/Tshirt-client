@@ -2,6 +2,9 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layout/Main";
 import Home from "../Pages/Home/Home/Home";
 import ProductDetails from "../Pages/ProductDetails/ProductDetails";
+import Products from "../Pages/Home/Home/Products/Products";
+
+import ShoppingCart from './../Layout/ShoppingCart/ShoppingCart';
 
 // Create the router
 export const router = createBrowserRouter([
@@ -10,12 +13,20 @@ export const router = createBrowserRouter([
     element: <Main></Main>, // Main layout with navigation
     children: [
       {
-        path: "/", // Home route
-        element: <Home></Home>, // Home component
+        path: "/", 
+        element: <Home></Home>, 
       },
       {
-        path: "product/:name", // Dynamic product detail route
-        element: <ProductDetails></ProductDetails>, // ProductDetails component
+        path: "product/:name", 
+        element: <ProductDetails></ProductDetails>, 
+      },
+      {
+        path: "casual", 
+        element: <Products></Products>, 
+      },
+      {
+        path: "cartitem", 
+        element: <ShoppingCart></ShoppingCart>, 
       },
     ],
   },
