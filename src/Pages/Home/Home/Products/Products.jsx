@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaStar, FaStarHalfAlt } from "react-icons/fa";
+import { FaStar, FaStarHalfAlt, FaBars } from "react-icons/fa";
 import img1 from "../../../../assets/top1.png";
 import img2 from "../../../../assets/top2.png";
 import img3 from "../../../../assets/top3.png";
@@ -62,83 +62,116 @@ const products = [
     image: img2,
   },
 ];
-const Sidebar = () => {
-    return (
-      <aside className="p-4 bg-white shadow-md w-64">
-        {/* Filters Heading */}
-        <h2 className="text-lg font-bold mb-4">Filters</h2>
-  
-        {/* Categories */}
-        <div className="mb-6">
-          <h3 className="font-semibold mb-2">Categories</h3>
-          <ul className="space-y-2">
-            {["T-shirts", "Shorts", "Shirts", "Hoodies", "Jeans"].map((category) => (
+
+// Sidebar Component
+const Sidebar = ({ isOpen, toggleSidebar }) => {
+  return (
+    <aside
+      className={`fixed lg:static top-0 left-0 h-full bg-white shadow-md w-64 p-4 transform ${
+        isOpen ? "translate-x-0" : "-translate-x-full"
+      } lg:translate-x-0 transition-transform duration-300 ease-in-out z-50`}
+    >
+      <button
+        className="lg:hidden mb-4 text-gray-700"
+        onClick={toggleSidebar}
+      >
+        Close
+      </button>
+      {/* Filters Heading */}
+      <h2 className="text-lg font-bold mb-4">Filters</h2>
+
+      {/* Categories */}
+      <div className="mb-6">
+        <h3 className="font-semibold mb-2">Categories</h3>
+        <ul className="space-y-2">
+          {["T-shirts", "Shorts", "Shirts", "Hoodies", "Jeans"].map(
+            (category) => (
               <li key={category} className="cursor-pointer hover:underline">
                 {category}
               </li>
-            ))}
-          </ul>
+            )
+          )}
+        </ul>
+      </div>
+
+      {/* Price Filter */}
+      <div className="mb-6">
+        <h3 className="font-semibold mb-2">Price</h3>
+        <div className="flex items-center justify-between mb-2">
+          <span>$50</span>
+          <span>$200</span>
         </div>
-  
-        {/* Price Filter */}
-        <div className="mb-6">
-          <h3 className="font-semibold mb-2">Price</h3>
-          <div className="flex items-center justify-between mb-2">
-            <span>$50</span>
-            <span>$200</span>
-          </div>
-          <input type="range" min="50" max="200" className="w-full" />
+        <input type="range" min="50" max="200" className="w-full" />
+      </div>
+
+      {/* Colors */}
+      <div className="mb-6">
+        <h3 className="font-semibold mb-2">Colors</h3>
+        <div className="grid grid-cols-5 gap-2">
+          {[
+            "green",
+            "yellow",
+            "red",
+            "blue",
+            "pink",
+            "purple",
+            "cyan",
+            "black",
+            "white",
+          ].map((color) => (
+            <div
+              key={color}
+              className={`w-6 h-6 rounded-full cursor-pointer`}
+              style={{ backgroundColor: color }}
+            ></div>
+          ))}
         </div>
-  
-        {/* Colors */}
-        <div className="mb-6">
-          <h3 className="font-semibold mb-2">Colors</h3>
-          <div className="grid grid-cols-5 gap-2">
-            {["green", "yellow", "red", "blue", "pink", "purple", "cyan", "black", "white"].map(
-              (color) => (
-                <div
-                  key={color}
-                  className={`w-6 h-6 rounded-full cursor-pointer`}
-                  style={{ backgroundColor: color }}
-                ></div>
-              )
-            )}
-          </div>
+      </div>
+
+      {/* Sizes */}
+      <div className="mb-6">
+        <h3 className="font-semibold mb-2">Size</h3>
+        <div className="flex flex-wrap gap-2">
+          {[
+            "XX-Small",
+            "X-Small",
+            "Small",
+            "Medium",
+            "Large",
+            "X-Large",
+            "XX-Large",
+          ].map((size) => (
+            <button
+              key={size}
+              className="border px-3 py-1 text-sm rounded hover:bg-gray-200"
+            >
+              {size}
+            </button>
+          ))}
         </div>
-  
-        <div className="mb-6">
-          <h3 className="font-semibold mb-2">Size</h3>
-          <div className="flex flex-wrap gap-2">
-            {["XX-Small", "X-Small", "Small", "Medium", "Large", "X-Large", "XX-Large"].map((size) => (
-              <button
-                key={size}
-                className="border px-3 py-1 text-sm rounded hover:bg-gray-200"
-              >
-                {size}
-              </button>
-            ))}
-          </div>
-        </div>
-  
-        {/* Dress Style */}
-        <div className="mb-6">
-          <h3 className="font-semibold mb-2">Dress Style</h3>
-          <ul className="space-y-2">
-            {["Casual", "Formal", "Party", "Gym"].map((style) => (
-              <li key={style} className="cursor-pointer hover:underline">
-                {style}
-              </li>
-            ))}
-          </ul>
-        </div>
-  
-        {/* Apply Button */}
-        <button className="w-full bg-black text-white py-2 rounded hover:bg-gray-800">
-          Apply Filter
-        </button>
-      </aside>
-    );
-  };
+      </div>
+
+      {/* Dress Style */}
+      <div className="mb-6">
+        <h3 className="font-semibold mb-2">Dress Style</h3>
+        <ul className="space-y-2">
+          {["Casual", "Formal", "Party", "Gym"].map((style) => (
+            <li key={style} className="cursor-pointer hover:underline">
+              {style}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Apply Button */}
+      <button className="w-full bg-black text-white py-2 rounded hover:bg-gray-800">
+        Apply Filter
+      </button>
+    </aside>
+  );
+};
+
+// ProductCard Component
 const ProductCard = ({ product }) => (
   <div className="border rounded-md p-4">
     <img src={product.image} alt={product.name} className="w-full mb-4" />
@@ -155,6 +188,7 @@ const ProductCard = ({ product }) => (
   </div>
 );
 
+// ProductGrid Component
 const ProductGrid = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 4;
@@ -179,8 +213,8 @@ const ProductGrid = () => {
   };
 
   return (
-    <div className="p-4 w-3/4">
-      <div className="grid grid-cols-3 gap-4">
+    <div className="p-4 w-full lg:w-3/4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {displayedProducts.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
@@ -207,12 +241,29 @@ const ProductGrid = () => {
     </div>
   );
 };
-const App = () => (
-    <div className="flex sm:flex-col lg:flex-row md:flex-row ">
-      <Sidebar />
+
+// Main App Component
+const App = () => {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
+  return (
+    <div className="flex flex-col lg:flex-row">
+      <div className="lg:hidden p-4">
+        <button
+          onClick={toggleSidebar}
+          className="text-2xl p-2 border rounded-md bg-gray-800 text-white"
+        >
+          <FaBars />
+        </button>
+      </div>
+      <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
       <ProductGrid />
     </div>
   );
-  
-  export default App;
+};
 
+export default App;
