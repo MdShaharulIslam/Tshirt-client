@@ -84,7 +84,6 @@ const ShoppingCart = () => {
         </div>
       </div>
 
-      {/* Order Summary Section */}
       <div className="lg:w-1/3 bg-gray-50 p-4 lg:p-6 rounded-lg border">
         <h2 className="text-xl font-semibold mb-4">Order Summary</h2>
         <div className="space-y-3">
@@ -94,7 +93,7 @@ const ShoppingCart = () => {
           </div>
           <div className="flex justify-between text-red-500">
             <span>Discount (-20%)</span>
-            <span>-${discount}</span>
+            <span>-${discount}</span> 
           </div>
           <div className="flex justify-between">
             <span>Delivery Fee</span>
