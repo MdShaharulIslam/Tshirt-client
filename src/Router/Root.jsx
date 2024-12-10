@@ -6,11 +6,10 @@ import Products from "../Pages/Home/Home/Products/Products";
 
 import ShoppingCart from './../Layout/ShoppingCart/ShoppingCart';
 
-// Create the router
 export const router = createBrowserRouter([
   {
-    path: "/", // Root path
-    element: <Main></Main>, // Main layout with navigation
+    path: "/", 
+    element: <Main></Main>, 
     children: [
       {
         path: "/", 
