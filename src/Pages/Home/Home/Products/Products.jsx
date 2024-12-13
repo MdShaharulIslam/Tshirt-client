@@ -63,7 +63,7 @@ const products = [
   },
 ];
 
-// Sidebar Component
+
 const Sidebar = ({ isOpen, toggleSidebar }) => {
   return (
     <aside
