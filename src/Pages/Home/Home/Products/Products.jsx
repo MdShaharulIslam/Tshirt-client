@@ -151,7 +151,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
         </div>
       </div>
 
-      {/* Dress Style */}
+    
       <div className="mb-6">
         <h3 className="font-semibold mb-2">Dress Style</h3>
         <ul className="space-y-2">
@@ -163,7 +163,6 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
         </ul>
       </div>
 
-      {/* Apply Button */}
       <button className="w-full bg-black text-white py-2 rounded hover:bg-gray-800">
         Apply Filter
       </button>
@@ -171,7 +170,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
   );
 };
 
-// ProductCard Component
+
 const ProductCard = ({ product }) => (
   <div className="border rounded-md p-4">
     <img src={product.image} alt={product.name} className="w-full mb-4" />
