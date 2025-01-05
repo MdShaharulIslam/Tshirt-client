@@ -187,12 +187,11 @@ const ProductCard = ({ product }) => (
   </div>
 );
 
-// ProductGrid Component
 const ProductGrid = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 4;
 
-  // Calculate the indexes of the products to display on the current page
+  
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const displayedProducts = products.slice(startIndex, endIndex);
@@ -241,7 +240,7 @@ const ProductGrid = () => {
   );
 };
 
-// Main App Component
+
 const App = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
