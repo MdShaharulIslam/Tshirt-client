@@ -10,12 +10,11 @@ const DressStyle = () => {
     <section className="py-12 bg-[#f5f5f5] rounded-lg">
       <h2 className="text-3xl font-bold text-center mb-8">BROWSE BY DRESS STYLE</h2>
 
-      {/* Image Grid */}
+    
       <div className="max-w-6xl mx-auto gap-4">
         
-        {/* First Row */}
         <div className="flex flex-col lg:flex-row justify-center gap-4 mb-4">
-  {/* Larger Image */}
+
   <div className="w-full lg:w-1/3">
    <Link to='casual'>  <img src={casualImg} alt="Casual" className="w-full object-cover h-[289px]" /></Link>
    
