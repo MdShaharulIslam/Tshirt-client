@@ -20,14 +20,13 @@ const DressStyle = () => {
    
   </div>
 
-  {/* Smaller Image */}
   <div className="w-full lg:w-2/3">
     <img src={formalImg} alt="Formal" className="w-full object-cover h-[289px]" />
   </div>
 </div>
 
 
-        {/* Second Row */}
+       
         <div className="flex flex-col lg:flex-row justify-center gap-4">
           <div className="flex-1 w-full lg:w-2/3">
             <img src={partyImg} alt="Party" className="w-full object-cover 
